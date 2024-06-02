@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>让我帮你百度一下 - Aurielの实验室</title>
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/base64.min.js"></script>
+<script src="js/clipboard.min.js"></script>
+<script src="js/script.js"></script>
+<!--Google Analytics(gtag)--> <script type="text/javascript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "fu11495sl7"); </script>
+<!--Microsoft Clarity--> <script type="text/javascript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "fu11495sl7"); </script> <!--百度统计--> <script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?6f06504e0effd8ada0d6de8da7cdb9c1"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
+<!--51LA统计--> <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"JgqPSyTX0bBpPwXV",ck:"JgqPSyTX0bBpPwXV"})</script>
+<!--灵雀应用监控--> <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
+<script> new LingQue.Monitor().init({id:"Jk6zc9D356fnVo2s",sendSuspicious:true}); </script>
+</head>
+<body>
+<section id="search">
+<div class="search-header">
+<h2>
+<span class="let-me">让我帮你</span>
+<img src="img/baidu_logo.png" alt="百度" title="让我帮你百度一下">
+<span class="for-you">一下</span>
+</h2>
+</div>
+<form id="search-form">
+<div class="search-form-group">
+<div class="search-form-input">
+<input type="search" id="kw" maxlength="255" autocomplete="off" required>
+</div>
+<button id="search-submit">百度一下</button>
+</div>
+</form>
+</section>
+<section id="function">
+<p id="tips">输入一个问题，然后点击百度一下</p>
+
+<div id="output">
+<textarea id="url-output" rows="3" readonly></textarea>
+<div class="tool-btns">
+<button data-clipboard-target="#url-output">复制</button>
+<button id="preview">预览</button>
+</div>
+</div>
+</section>
+<footer id="footer">
+<ul class="footer-left">
+</ul>
+<ul class="footer-right">
+<li>*注：本站与百度公司没有任何联系，baidu 以及本站出现的百度公司 Logo 是百度公司的商标。</li>
+</ul>
+</footer>
+<div id="arrow"></div>
+</body>
+</html>

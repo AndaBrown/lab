@@ -38,7 +38,7 @@ body {
 }
 
 .one {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .one > img {
@@ -49,11 +49,11 @@ body {
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .three {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .four .text-box {
@@ -85,7 +85,7 @@ body {
 }
 
 .five p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -95,6 +95,15 @@ body {
   padding: 3px 5px;
   border-radius: 3px;
   display: inline-block;
+}
+
+.five .idea-1 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.five .idea-2 {
+  font-size: 2rem;
+  font-weight: lighter;
 }
 
 .five .idea-5 {
@@ -216,7 +225,6 @@ body {
 }
 
 .wish h5 {
-  font-weight: lighter;
   font-size: 2rem;
   margin: 10px 0 0;
 }
