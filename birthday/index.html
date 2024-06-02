@@ -15,19 +15,6 @@
   <script>LA.init({id:"JgqPSyTX0bBpPwXV",ck:"JgqPSyTX0bBpPwXV"})</script>
   <!--灵雀应用监控--> <script src="https://sdk.51.la/perf/js-sdk-perf.min.js" crossorigin="anonymous"></script>
   <script> new LingQue.Monitor().init({id:"Jk6zc9D356fnVo2s",sendSuspicious:true}); </script>
-  <script src="./script/jquery-1.11.1.min.js"></script>
-  <script>
-  //获取请求参数,支持伪静态
-  function GetQueryString(name)
-    {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-        var r = window.location.search.substr(1).match(reg);
-        if(r!=null) { return  unescape(r[2]); }
-        else { return window.location.pathname.replace('/birthday/',''); }
-    }
-    var name = GetQueryString("name");
-    document.getElementById("name").innerText = name ;
-    </script>
 </head>
 
 <body data-rsssl=1 style="background-repeat:no-repeat; background-attachment:fixed;background-size:cover;background-image: url(./img/background.jpg);">
@@ -37,7 +24,7 @@
         position:fixed;
         top: 0px;
         left: 0px;
-        outline:5000px solid rgba(255, 255, 255, 0.1);
+        outline:5000px solid rgba(255, 255, 255, 0.25);
         z-index: 0;
     }
   </style>
@@ -46,7 +33,7 @@
     <div class="one">
       <h1 class="one">
         <span data-node-name="greeting">👋嗨，</span>
-        <span id="name">Auriel</span>
+        <p id="name"></p>
       </h1>
       <p class="two" data-node-name="greetingText">今天是一个特别的日子呢~</p>
     </div>
@@ -64,7 +51,7 @@
       <p class="idea-2" data-node-name="text3">但难免显得有点草率……</p>
       <p class="idea-3">
         <span data-node-name="text4">那么，让我们以一种</span>
-        <strong data-node-name="text4Adjective">特别</strong>的方式来庆祝~</p>
+        <strong data-node-name="text4Adjective">特别</strong> 的方式来庆祝~</p>
       <p class="idea-4" data-node-name="text5Entry">接下来</p>
       <p class="idea-5">
         <span data-node-name="text5Content">看仔细，别眨眼</span>
@@ -76,7 +63,7 @@
       </p>
     </div>
     <div class="six">
-      <img src="./img/cake.png" alt="" class="lydia-dp" data-node-name="imagePath">
+      <img src="./img/cake.png" alt="" class="lydia-dp" data-node-name="imagePath" width="400px" height="400px">
       <div class="wish">
         <h3 class="wish-hbd" data-node-name="wishHeading">Happy Birthday!</h3>
         <h5 data-node-name="wishText">清风微拂杨柳摇，柳絮杨花随风飘。愿你在缤纷的人生之旅中心想事成！</h5>
@@ -149,13 +136,31 @@
       </svg>
     </div>
     <div class="nine">
-      <p data-node-name="outroText">希望你会喜欢！</p>
-      <p id="replay" data-node-name="replayText">点击屏幕可以再看一遍~</p>
+      <p data-node-name="outroText">祝你快乐每一天！希望你会喜欢！</p>
+      <p id="replay" data-node-name="replayText">点击此处可以再看一遍~</p>
       <p class="last-smile" data-node-name="outroSmiley">:)</p>
     </div>
   </div>
 </body>
 
+<script src="./script/jquery-1.11.1.min.js"></script>
+<script>
+//获取请求参数,支持伪静态
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+  window.onload= function(){
+    var name = getQueryVariable("name");
+    document.getElementById("name").innerText = name;
+  }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script type="application/javascript" src="script/main.js"></script>
 </html>
