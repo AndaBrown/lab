@@ -52,7 +52,11 @@ const animationTimeline = () => {
     skewX: "-15deg"
   };
 
-  const tl = new TimelineMax();
+  var tmax_options = {
+    delay: 2000,
+  };
+  
+  const tl = new TimelineMax(tmax_options);
 
   tl
     .to(".container", 0.1, {
