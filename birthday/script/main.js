@@ -53,7 +53,7 @@ const animationTimeline = () => {
   };
 
   var tmax_options = {
-    delay: 2000,
+    delay: 2,
   };
   
   const tl = new TimelineMax(tmax_options);
